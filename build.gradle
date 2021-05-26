@@ -1,0 +1,25 @@
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:7.3.0'
+    //implementation 'com.jcabi:jcabi-github:1.1.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'org.hamcrest:java-hamcrest:2.0.0.0'
+    implementation 'org.seleniumhq.selenium:selenium-remote-driver:3.141.0'
+    implementation 'ru.yandex.qatools.ashot:ashot:1.5.4'
+
+}
+test {
+    filter {
+        includeTestsMatching "*.Tests"
+    }
+}
+
